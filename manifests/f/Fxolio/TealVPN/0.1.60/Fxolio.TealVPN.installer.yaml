@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
+
+PackageIdentifier: Fxolio.TealVPN
+PackageVersion: 0.1.60
+InstallerType: exe
+Scope: machine
+InstallModes:
+- interactive
+- silent
+- silentWithProgress
+InstallerSwitches:
+  Silent: /quiet
+  SilentWithProgress: /quiet
+UpgradeBehavior: install
+ProductCode: TealVPN
+ReleaseDate: 2026-11-11
+AppsAndFeaturesEntries:
+- DisplayName: Teal VPN
+  Publisher: Fxolio LLC
+  ProductCode: TealVPN
+ElevationRequirement: elevatesSelf
+MinimumOSVersion: 10.0.0.0
+Installers:
+- Architecture: x64
+  InstallerUrl: https://github.com/tealvpn/windows/releases/download/v0.1.60/TealVPN-Setup-x64.exe
+  InstallerSha256: 9B91B66EEDF9CFD70A88934FC074BFC91E753F68D2019A5BA7C798B9E5CFA855
+- Architecture: arm64
+  InstallerUrl: https://github.com/tealvpn/windows/releases/download/v0.1.60/TealVPN-Setup-arm64.exe
+  InstallerSha256: 747E42134783A77DFAF865D7F5414869B74B9525207629CB18EB9A837C866633
+ManifestType: installer
+ManifestVersion: 1.12.0
